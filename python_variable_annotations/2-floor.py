@@ -5,6 +5,6 @@ Demonstrates type-annotation on a basic function
 import math
 
 
-def floor(n: float) -> float:
+def floor(n: float) -> int:
     """Returns the floor of n"""
     return math.floor(n)
