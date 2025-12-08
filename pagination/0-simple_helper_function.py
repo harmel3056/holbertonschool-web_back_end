@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+Helper function for pagination
+"""
 
 def index_range(page, page_size):
     """
