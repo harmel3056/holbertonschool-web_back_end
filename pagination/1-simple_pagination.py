@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-import csv
-import math
-from typing import List
 """
 Facilitates multiple helper functions to extract items based
 on page number and objects per page
 """
+
+import csv
+import math
+from typing import List
 
 
 def index_range(page, page_size):
