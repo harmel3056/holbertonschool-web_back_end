@@ -3,6 +3,7 @@
 Helper function for pagination
 """
 
+
 def index_range(page, page_size):
     """
     Calculate the start and end indexes for a given page of data.
