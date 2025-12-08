@@ -3,7 +3,8 @@ import csv
 import math
 from typing import List
 """
-Facilitates multiple helper functions to extract items based on page number and objects per page
+Facilitates multiple helper functions to extract items based
+on page number and objects per page
 """
 
 
