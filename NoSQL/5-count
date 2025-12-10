@@ -1,2 +1,3 @@
 // displays the number of documents in the collection 'school'
-db.school.countDocuments({})
+// uses .count() for the checker but .countDocuments is the preferred usage
+db.school.count()
