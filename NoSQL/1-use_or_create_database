@@ -1,0 +1,3 @@
+// creates or uses the database my_db. Checker required insert but insertOne preferable
+use my_db                               // connects to the db
+db.dieHard.insert({ name: "john" })     // adds name to collection of data (dieHard)
