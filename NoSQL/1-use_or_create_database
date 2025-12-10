@@ -1,3 +1,4 @@
 // creates or uses the database my_db. Checker required insert but insertOne preferable
+// dieHard is the collection of data and we have added name to that collection
 use my_db
 db.dieHard.insert({ name: "john" })
