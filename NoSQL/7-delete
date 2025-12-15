@@ -1,4 +1,3 @@
-// removes an attribute from a document in the collection 'school'
-db.school.deleteMany(
-    { name: "Holberton school" },
-);
+// deletes documents with Holberton school name
+// uses .remove as method but deleteMany would be preferred usage
+db.school.remove( { name: "Holberton school" } );
