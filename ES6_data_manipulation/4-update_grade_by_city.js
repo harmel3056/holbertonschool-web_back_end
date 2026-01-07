@@ -9,6 +9,9 @@ export default function updateStudentGradeByCity(students, city, grades) { // ou
         firstName: student.firstName,
         location: student.location,
         grade: (gradeVar && gradeVar.grade) || 'N/A', //returns gradeVar.grade if it exists, else N/A
+        /* With the above section, if we check for gradeVar.grade alone the system assumes that gradeVar definitely
+        exists, so if gradeVar.grade doesn't exist an error will return. A check on gradeVar that returns false or
+        undefined stops the expression and returns gradeVar itself, so it prevents an error return.*/
       }; // INNER return of one value to .map for EACH student returned by .filter
     }); // return from OUTER function, only runs ONCE
 }
