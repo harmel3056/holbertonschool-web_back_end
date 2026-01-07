@@ -1,13 +1,18 @@
-export default function updateStudentGradeByCity(students, city, grades) {
-  return students.filter((student) => student.location === city)
-    .map((student) => {
-      const gradeVar = grades.find((grade) => grade.studentId === student.id);
+export default function updateStudentGradeByCity(students, city, grades) { // outer function
+  return students.filter((student) => student.location === city) // filters each student by locations that match city entered
+    .map((student) => { // .map takes singular student
+      const gradeVar = grades.find((grade) => grade.studentId === student.id); 
+      // finds where student id on grades array matches student id on students array
 
       return {
         id: student.id,
         firstName: student.firstName,
         location: student.location,
-        grade: (gradeVar && gradeVar.grade) || 'N/A',
-      };
-    });
+        grade: (gradeVar && gradeVar.grade) || 'N/A', //returns gradeVar.grade if it exists, else N/A
+      }; // INNER return of one value to .map for EACH student returned by .filter
+    }); // return from OUTER function, only runs ONCE
 }
+
+/* So, we only want to produce results for students of 'city', therefore we create an outer function which
+does that, but within it we still need to ensure that the grades are matched via the DBs studen IDs,
+and also return those details in the required format. */
