@@ -9,6 +9,9 @@ export default function groceriesList() {
 
   const productMap = new Map(
     products.map(({ name, quantity }) => [name, quantity])
+    /* {name, quantity} is the parameter list for .map() and under the hood
+    is destructuring, it's like shorthand for products.name products.quantity.
+    The [] section sets out the return value for each iteration of .map() */
   );
 
   return productMap
