@@ -1,7 +1,7 @@
-export default function getFullResponseFromAPI(success) {
+export default function getFullResponseFromAPI(success) { // Boolean parameter (true, false)
   if (success === true) {
-    return Promise.resolve({
-      status: 200,
+    return Promise.resolve({ // Creates a new 'resolve' promise, shorthand for 'new Promise'
+      status: 200, // Object components
       body: 'Success'
     })
   };
