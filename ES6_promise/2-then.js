@@ -12,6 +12,6 @@ export default function handleResponseFromAPI(promise) {
   })
   .catch(() => { // Runs only if incoming promise rejects, the error handler
     console.log('Got a response from the API');
-    return {}; // Handles the rejection with an empty return, no error message will return
+    return new Error(); // Handles the rejection with an empty Error return, no error message will return
   });
 }
