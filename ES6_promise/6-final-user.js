@@ -9,6 +9,6 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     results.map((result) => ({ // Transform each settled result
       status: result.status, value: result.status === 'fulfilled' // Keep the status 'fulfilled'
         ? result.value // ternary: if result.status is "fulfilled" use value
-        : result.reason // else "rejected" use reason
+        : result.reason.toString() // else "rejected" use reason
     })))
 }
