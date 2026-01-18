@@ -9,7 +9,7 @@ const rl = readline.createInterface({
 rl.question('Welcome to Holberton School, what is your name?\n', (name) => {
   // .question enacts a callback once an entry has been made and returned
   // (name) becomes the parameter for that callback function
-  process.stdout.write(`Your name is: ${name}\r\n`);
+  process.stdout.write(`Your name is: ${name}\r`);
   // this is the callback, which uses the parameter (entry made by user)
 
   process.on('exit', () => { // creates this process only if 'exit' enacted
