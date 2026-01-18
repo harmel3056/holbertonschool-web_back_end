@@ -12,6 +12,7 @@ rl.question('Welcome to Holberton School, what is your name?\n', (name) => {
   process.stdout.write(`Your name is: ${name}\r\n`);
   // this is the callback, which uses the parameter (entry made by user)
 
+  process.on('exit', () => { // creates this process only if 'exit' enacted
   process.stdout.write('This important software is now closing\n');
-  rl.close(); // function closes itself
+  });
 });
