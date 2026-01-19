@@ -11,3 +11,5 @@ const app = http.createServer((request, response) => {
 });
 
 app.listen(1245); // Activates this server and tells it which port to listen on
+
+module.exports = app;
