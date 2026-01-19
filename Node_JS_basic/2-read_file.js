@@ -31,8 +31,8 @@ function countStudents(path) {
     const listSWE = studentsSWE.join(', ');
 
     console.log(`Number of students: ${studentQty}`);
-    console.log(`Number of students in ${studentsCS[3]}: ${numCS}. List: ${listCS}`);
-    console.log(`Number of students in ${studentsSWE[3]}: ${numSWE}. List: ${listSWE}`);
+    console.log(`Number of students in CS: ${numCS}. List: ${listCS}`);
+    console.log(`Number of students in SWE: ${numSWE}. List: ${listSWE}`);
   } catch (err) { // handle errors
     throw new Error('Cannot load the database');
   }
