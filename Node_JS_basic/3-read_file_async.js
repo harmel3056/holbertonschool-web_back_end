@@ -13,10 +13,11 @@ async function countStudents(path) {
         return;
       }
       const studentLines = students.split(/\r?\n/).filter(Boolean); // returns an array of lines
-      const studentQty = studentLines.length - 1;
+      studentLines.shift(); // removes header
+      const studentQty = studentLines.length;
       /* separates lines based on /windows newline or newline/
       .filter(Boolean) ensures only lines with content are included
-      .length to find number of lines, -1 to account for the title line */
+      .length to find number of lines */
 
       const studentsCS = [];
       for (const line of studentLines) { // currently in string form
@@ -38,11 +39,12 @@ async function countStudents(path) {
       const numSWE = studentsSWE.length;
       const listSWE = studentsSWE.join(', ');
 
-      console.log(`Number of students: ${studentQty}`);
-      console.log(`Number of students in CS: ${numCS}. List: ${listCS}`);
-      console.log(`Number of students in SWE: ${numSWE}. List: ${listSWE}`);
+      const output = 
+      `Number of students: ${studentQty}\n` +
+      `Number of students in CS: ${numCS}. List: ${listCS}\n` +
+      `Number of students in SWE: ${numSWE}. List: ${listSWE}\n`;
 
-      resolve();
+      resolve(output);
     });
   });
 }
